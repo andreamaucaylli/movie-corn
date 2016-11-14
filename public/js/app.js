@@ -98,3 +98,34 @@ var cargarPagina = function () {
         c.find('pre').html('');
     });
 };
+
+$(function() {
+	setTimeout(function(){
+		$(".logo-temporal").addClass("ocultar");
+		$("#logo-login").removeClass("ocultar");
+		$("#login").removeClass("ocultar");
+		/*$("#logo").removeClass("oculto");
+		$("#logo-login").css({'height':"30vh"});*/
+	}, 5000);
+	$.ajax({
+		url: '//connect.facebook.net/es_ES/all.js',
+		dataType: 'script',
+		cache: true,
+		success: function() {
+			FB.init({
+				appId: '1271991989487510',
+				status: true,
+				cookie: true,
+				xfbml: true
+			});
+			FB.Event.subscribe('auth.authResponseChange', function(response) {
+				if (response && response.status == 'connected') {
+					window.location="pelis.html";
+					FB.api('/me', function(response) {
+						alert('Hola' + response.name);
+					});
+				}
+			});
+		}
+	});
+});
