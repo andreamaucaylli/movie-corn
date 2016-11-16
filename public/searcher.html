@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Movie Corn</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div data-role="page" id="pageone" class="bg-blue">
+			<div data-role="panel" id="myPanel">
+				<div class="contenedor-img">
+					<img alt="tu foto" id="foto-perfil">
+					<p id="nombre"></p>
+				</div>
+				<p class="chat chat-last"><i class="glyphicon glyphicon-comment"></i> Chat</p>
+				<p class="chat"><i class="glyphicon glyphicon-home"></i> Home</p>
+				<p class="chat"><i class="glyphicon glyphicon-facetime-video"></i> Movies</p>
+				<p class="chat"><i class="glyphicon glyphicon-expand"></i> Series</p>
+				<p class="chat"><i class="glyphicon glyphicon-screenshot"></i> Genres</p>
+			</div>
+			<div data-role="main" class="ui-content">
+				<a href="#myPanel">
+					<i class="bg-white glyphicon glyphicon-menu-right"></i>
+				</a>
+				<div class="contenedor-searcher">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="bs-component">
+								<form class="well form-search" id="search-by-title-form" onsubmit="return false;">
+									<div>
+										<label class="control-label" for="titulo">Search your movie by title:</label>
+										<input type="text" id="titulo" name="t" class="input-small" placeholder="Write your movie">
+										<select class="display-none" name="plot">
+											<option value="short" selected="">Short</option>
+											<option value="full">Full</option>
+										</select>
+										<button id="search-by-title-button" type="button" class="btn-sm btn-primary">Search</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="conten">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
