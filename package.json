@@ -1,11 +1,11 @@
 {
   "name": "movie-corn",
   "version": "1.0.0",
-  "description": "movie app",
-  "main": "server.js",
+  "description": "Movie web app",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
